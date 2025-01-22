@@ -142,7 +142,9 @@ a img:hover{
   box-shadow: 0 0 20px #ffffff;
 }
 
-nav a{ 
+nav a,
+nav a:visited
+{ 
   text-decoration: none;
   color: blue;
 }
@@ -202,11 +204,30 @@ nav{
   gap: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: xx-large; 
+  background-color: black;
+  color: white; 
 }
-.main-nav {
+
+.nav-link-active {
+  padding: 3%;
+  border-radius: 25%;
+  color:black;
+  text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px white,
+        0 0 30px white,
+        0 0 40px white,
+        0 0 55px white,
+        0 0 70px white;
+  font-size: 2rem;
+}
+
+
+.links {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  text-align: space-evenly;
 }
 
 .main-nav a {
