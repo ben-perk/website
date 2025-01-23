@@ -1,39 +1,54 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title> Benjamin Perkton</title>
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<header>
-    <center>
-    <img src="images\head subtext.png" class="header-img img-fluid">
-    </center>
-<div class="links">
-    <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="flyers.html">Flyers</a>
-                <a href="education.html">Education</a>
-    </nav> 
-    </div>  
-</header> 
-<body>
-    <center>
-        <div id="form">
-            <h2>Leave A Comment</h2>
-            <form>
-               <label for="fname">First Name:</label>
-               <input type="text" class="form-control" id="fname" name="fname" required>
-                <br>
-               <label for="lname">Last Name:</label>
-               <input type="text" class="form-control" id="lname" name="lname" required>
-                <br>
-               <label for="email">Email:</label>
-               <input type="email" class="form-control" id="email2" name="email" required>
-                <br>
-                <br>
-              <h2>Pronouns:</h2>
-               <br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Benjamin Perkton-Contact Me</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <main>
+     <body>
+        <header>
+             <center>
+                <img src="images\head subtext.png" class="header-img img-fluid">
+             </center>
+            <div class="links">
+             <nav>
+                 <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="flyers.html">Flyers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Education</a>
+                    </li>
+                    <li>
+                        <a class="nav-link-active" href="contacts.html">Contact Me</a>
+                    </li>
+                 </ul>    
+             </nav>
+            </div> 
+        </header> 
+        <main>
+         <center>
+             <h3 class="">Contact Me!</h3>
+             <form class="" id="user-info">
+                <div class="form-group">
+                    <label for="name" class="">Name</label>
+                    <input type="text" class="" id="name">
+                </div>
+              <br>
+                <div class="form-group">
+                    <label for="email" class="">Email</label>
+                     <input type="email" class="" id="email">
+                </div>
+            </form>
+             <form>
+             <h2>Pronouns:</h2>
                 <input type="checkbox" id = "she" name="she" value="She">
                 <label for="she">She/Her</label>
                 <br>
@@ -47,36 +62,40 @@
                 <input type="input" id="other" name="other" value="Ze/Zir">
                 <br>
                 <br>
-                <label for="comment">Comment:</label>
-                  <input type="submit" value="Submit"/>
+                <div class="form-group">     
+                    <textarea id="comment" name="comment" rows="4" cols="30" 
+                    placeholder="Leave Comment Here!" size="1" required id="id_body"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="submit"/>
             </form>
-        </div>
-        <h2>Contact Information</h2>
-    <div class="links">
-        <div class="email">
-    <h2> Email</h2>
-<p><a href="mailto:ben.perkton@gmail.com"><i>benjaminperkton@gmail.com</i></a></p>
-        </div>
-        <div class="phone">
-            <h2>Phone</h2>
-    <p><a href="tel:4703319586"><i>Phone: (470) 331-9586</i></a></p>
-        </div>
-    </div>
-<p>Thank you for visiting my website! If you have any questions or would like to get in touch,<br> please feel free to reach out to me using the contact information provided above.<br> I look forward to hearing from you!</p>
-</center>
-
-</body>
+            <br>
+            <h2>My Contact Information</h2>
+            <div class="links">
+                <div class="email">
+                     <h2> Email</h2>
+                     <p><a href="mailto:ben.perkton@gmail.com"><i>benjaminperkton@gmail.com</i></a></p>
+                </div>
+                <div class="phone">
+                    <h2>Phone</h2>
+                    <p><a href="tel:4703319586"><i>Phone: (470) 331-9586</i></a></p>
+                </div>
+            </div>
+            <p>Thank you for visiting my website! If you have any questions or would like to get in touch,<br> please feel free to reach out to me using the contact information provided above.<br> I look forward to hearing from you!</p>
+         </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     </body>
+    </main>
 <footer class="container text-center">
-    <div class="row">
-        <a href="mailto:ben.perkton@gmail.com" class="col" aria-label="Email">
+    <div class="row index-footer">
+        <a href="mailto:ben.perkton@gmail.com" class="col" aria-label="Email" target="_blank">
             <i class="bi bi-envelope fs-1" alt="Email icon" ></i> 
         </a>
-        <a href="tel:4703319586" class="col" aria-label="Phone">
+        <a href="tel:4703319586" class="col" aria-label="Phone" target="_blank">
             <i class="bi bi-telephone-fill fs-1 col"  alt="Phone icon"> </i> 
         </a>
-        <a href="https://www.linkedin.com/in/benjamin-perkton-96424633a/" aria-label="LinkedIn">
-        <i class="bi bi-linkedin linkedin-icon fs-1 col" width="200%" height="200%"></i>
+        <a href="https://www.linkedin.com/in/benjamin-perkton-96424633a/" aria-label="LinkedIn" target="_blank">
+            <i class="bi bi-linkedin linkedin-icon fs-1 col" width="200%" height="200%" alt="linkedin-icon"></i>
         </a>     
     </div>
 </footer>
-    </html>
+ </html>
