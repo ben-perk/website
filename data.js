@@ -24,8 +24,7 @@ form.addEventListener('submit', (event) => {
 
   // Do something with the form data, e.g., send it to a server
   const scriptURL=
-  "https://script.google.com/macros/s/AKfycbyaa2OaUPoYwx9ZX_ndoDPZnqebvacAWtgVTCQay-uhoIsiLxWZdcbsMCP4qFjqkLiVqQ/exec";
-
+  "https://script.google.com/macros/s/AKfycbxvg7UR2MrD6kwky9xJJzC8-msYCnPce2XgTGHo-vqTAqzBmQuZlOnSD4mkVynDwI9LOw/exec";
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         var formData = new FormData(form);
