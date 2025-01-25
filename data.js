@@ -23,26 +23,58 @@ form.addEventListener('submit', (event) => {
 
 
   // Do something with the form data, e.g., send it to a server
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbfvL1dMR1oT91Nw78JovoDJIjuHuwhiR43TxrCiWgL9QhxmSzOAlBz6XI40KeS7n1TQ/exec';
+  const scriptURL=
+  "https://script.google.com/macros/s/AKfycbyaa2OaUPoYwx9ZX_ndoDPZnqebvacAWtgVTCQay-uhoIsiLxWZdcbsMCP4qFjqkLiVqQ/exec";
 
-  try {
-    const response = await fetch(SCRIPT_URL, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+        var name = document.getElementById("name").checked;
+        var email = document.getElementById("email").checked;
+        var phone = document.getElementById("phone").checked;
+        var linkedin = document.getElementById("linkedin").checked;
+        var job = document.getElementById("job").checked;
+        
+
+        if (name) {
+          formData.append("name", "Yes");
+      } else {
+          formData.append("name", "No");
       }
-    });
-    
-    if (response.ok) {
-      console.log('Data successfully sent to spreadsheet!');
-      form.reset();
-    }
-  } catch (error) {
-    console.log('Error:', error);
-  }
-});
-});
+      
+      if (email) {
+          formData.append("email", "Yes");
+      } else {
+          formData.append("email", "No");
+      }
+      
+      if (phone) {
+          formData.append("phone", "Yes");
+      } else {
+          formData.append("phone", "No");
+      }
+      
+      if (linkedin) {
+          formData.append("linkedin", "Yes");
+      } else {
+          formData.append("linkedin", "No");
+      }
+      
+      if (job) {
+          formData.append("job", "Yes");
+      } else {
+          formData.append("job", "No");
+      }
+      
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+      });
 
 
 
