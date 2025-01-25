@@ -1,52 +1,49 @@
-async function sendData(data) {
-    // Construct a FormData instance
-    const formData = new FormData();
-  
-    // Add a text field
-    formData.append("name", "Pomegranate");
-  
-    // Add a file
-    const selection = await window.showOpenFilePicker();
-    if (selection.length > 0) {
-      const file = await selection[0].getFile();
-      formData.append("file", file);
-    }
-  
-    try {
-      const response = await fetch("https://example.org/post", {
-        method: "POST",
-        // Set the FormData instance as the request body
-        body: formData,
-      });
-      console.log(await response.json());
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  
-  const send = document.querySelector("#send");
-  send.addEventListener("click", sendData);
-
-  const form = document.querySelector("#userinfo");
-
-async function sendData() {
-  // Associate the FormData object with the form element
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch("https://example.org/post", {
-      method: "POST",
-      // Set the FormData instance as the request body
-      body: formData,
-    });
-    console.log(await response.json());
-  } catch (e) {
-    console.error(e);
-  }
+const form = document.querySelector('#contact-form');
+if (!form) {
+  console.error('Form element not found');
+  return;
 }
 
-// Take over form submission
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  sendData();
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  const formData = new FormData(form);
+
+  // Access individual form fields
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const phone = formData.get('phone');
+  const linkedin = formData.get('linkedin');  
+  const job = formData.get('job');
+
+  // Or loop through all form data
+  for (const [key, value] of formData.entries()) {
+    console.log(key, value);
+  }
+
+
+  // Do something with the form data, e.g., send it to a server
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw65isPRRH3yikinPWNRqlo6-IIX8f2Zm92DoHlq-jKeV15PtCjhA8QNdRsCWSTADNoIA/exec';
+
+  try {
+    const response = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    
+    if (response.ok) {
+      console.log('Data successfully sent to spreadsheet!');
+      form.reset();
+    }
+  } catch (error) {
+    console.log('Error:', error);
+  }
 });
+});
+
+
+
+

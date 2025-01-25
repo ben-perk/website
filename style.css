@@ -12,7 +12,7 @@ header {
 }
 .header-img{
 width: 100%;
-height: 100vh;
+height: 25%;
 object-fit: cover;
 display: block;
 }
@@ -162,6 +162,21 @@ nav a:visited
 nav a:hover{ 
   text-decoration: none;
   color: darkblue;
+}
+nav a:active{
+  text-decoration: none;
+  color: darkblue;
+}
+nav a:focus{
+  text-decoration: none;
+  color: darkblue;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
 }
 p a{
   text-decoration: none;
@@ -352,6 +367,10 @@ img.displaySlide{
 }
 
 
+@keyframes fade{
+  from{opacity: 0.4;}
+  to{opacity: 1;}
+}
 
 #user-info {
   margin-bottom: 10px;
@@ -377,7 +396,17 @@ textarea:hover{
 }
 
 form{
-  width: 25%;
+  width: 55%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  border: 2px dashed blue;
 }
 
 form #user-info{
