@@ -354,6 +354,12 @@ img.displaySlide{
   max-height: 375px;
 }
 
+.slides img{
+
+  height: responsive;
+  display: ;
+}
+
 .slier button{ 
   position: absolute;
   top: 50%;
