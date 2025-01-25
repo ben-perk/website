@@ -23,7 +23,7 @@ form.addEventListener('submit', (event) => {
 
 
   // Do something with the form data, e.g., send it to a server
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw65isPRRH3yikinPWNRqlo6-IIX8f2Zm92DoHlq-jKeV15PtCjhA8QNdRsCWSTADNoIA/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbfvL1dMR1oT91Nw78JovoDJIjuHuwhiR43TxrCiWgL9QhxmSzOAlBz6XI40KeS7n1TQ/exec';
 
   try {
     const response = await fetch(SCRIPT_URL, {
